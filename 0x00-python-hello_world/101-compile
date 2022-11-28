@@ -1,3 +1,4 @@
-#!/usr/bin/python3
-import py_compile
-py_compile.compile('7-edges.py')
+#!/bin/bash
+python3 -m py_compile "$PYFILE"
+cp __pycache__/* "$PYFILEc"
+rm -rf __pycache__
