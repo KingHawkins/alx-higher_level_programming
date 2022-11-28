@@ -78,7 +78,7 @@ Namespaces are one honking great idea -- let's do more of those!
 <li><code>1-run_inline</code>  -   Shell script that runs Python code.The Python code will be saved in the environment variable <code>$PYCODE</code></li>
 <li><code>2-print.py</code>   -  Write a Python script that prints exactly <code>"Programming is like building a multilingual puzzle</code>, followed by a new line.</li>
 <li><code>3-print_number.py</code>  -  Complete this source code in order to print the integer stored in the variable number, followed by <code>Battery street</code>, followed by a new line.</li>
-<li><code>4-print_float.py<code>   -  Complete the source code in order to print the float stored in the variable number with a precision of 2 digits.</li>
+<li><code>4-print_float.py</code>   -  Complete the source code in order to print the float stored in the variable number with a precision of 2 digits.</li>
 <li><code>5-print_string.py</code>  - prints string three times followed by its first nine characters</li>
 <li><code>6-concat.py</code>  -  use two variables to print a conatenated string</li>
 <li><code>7-edges.py</code>   -  prints a first three characters of a word, last two characters of a word and the middle characters</li>
