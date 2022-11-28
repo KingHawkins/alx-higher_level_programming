@@ -17,6 +17,7 @@ Enjoy!
 ```
 
 
+
 <h3>Requirements</h3>
 <h4>Python Scripts</h4>
 <ul>
@@ -84,7 +85,7 @@ Namespaces are one honking great idea -- let's do more of those!
 <li><code>7-edges.py</code>   -  prints a first three characters of a word, last two characters of a word and the middle characters</li>
 <li><code>8-concat_edges.py</code>   -   conatenates edges of a string</li>
 <li><code>9-easter_egg.py</code>  -  Write a Python script that prints “The Zen of Python”, by TimPeters, followed by a new line.Your script should be maximum 98 characters long (please check with <code>wc -m 9-easter_egg.py)</code></li>
-<li><code>10-check_cycle.c</code>and<code>lists.h</code</li>  -  a <code>C</code> that checks if a singly linked list has a cycle in it.
+<li><code>10-check_cycle.c</code>and<code>lists.h</code></li>  -  a <code>C</code> that checks if a singly linked list has a cycle in it.
 <li><code>100-write.py</code>    -   Write a Python script that prints exactly and <code>that piece of art is useful - Dora Korpar, 2015-10-19</code>, followed by a new line.</li>
 <li><code>101-compile</code>  -  Write a script that compiles a Python script file.
 
