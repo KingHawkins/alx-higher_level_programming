@@ -9,4 +9,4 @@ for i in range(10):
             res = res + str(i) + str(j)
 
 
-print(res)
+print("{}".format(res))

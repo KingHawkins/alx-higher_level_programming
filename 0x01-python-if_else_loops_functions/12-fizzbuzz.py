@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+`#!/usr/bin/python3
 def fizzbuzz():
     select = ''
     for i in range(1, 101):
@@ -6,7 +6,7 @@ def fizzbuzz():
             print('FizzBuzz', end='')
             print(' ', end='')
         elif i % 3 == 0:
-            print('Fizz' ,end='')
+            print('Fizz', end='')
             print(' ', end='')
         elif i % 5 == 0:
             if i == 100:
@@ -16,8 +16,7 @@ def fizzbuzz():
                 print(' ', end='')
         else:
             print(i, end='')
-            print(' ', end='')
-
+            print(' ', end=''ii
 
 
 fizzbuzz()
