@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 def add(a, b):
-    return a+b
+    return int(a+b)
+
 
 add(a, b)

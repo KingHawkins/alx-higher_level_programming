@@ -6,6 +6,7 @@ def reverse_alt_case():
             res = res + chr(i).upper()
         else:
             res = res + chr(i)
-    print(res, end='')
+    print("{}".format(res), end='')
+
 
 reverse_alt_case()
