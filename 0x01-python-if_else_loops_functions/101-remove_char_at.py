@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def remove_char_at(str, n):
     copied = str[:]
-    if str != ''
+    if copied is True:
         if n < 0:
             get_rid = copied[:]
         else:
