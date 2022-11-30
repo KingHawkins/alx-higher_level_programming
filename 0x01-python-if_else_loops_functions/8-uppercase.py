@@ -11,4 +11,4 @@ def uppercase(strin):
         else:
             result += alphabet[i+26]
 
-    print(result)
+    print("{}".format(result))

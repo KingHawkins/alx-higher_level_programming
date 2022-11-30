@@ -7,4 +7,9 @@ def print_last_digit(number):
         last_digit = int(str(number)[-1:] + str(number)[-1:])
     elif number < 0:
         last_digit = int(str(number)[-1:] + str(number)[-1:])
-    return last_digit
+    else:
+        last_digit = int(str(number)[-1:])
+    print(last_digit)
+
+
+print_last_digit(98)
