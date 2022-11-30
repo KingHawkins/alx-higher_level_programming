@@ -10,4 +10,4 @@ for i in range (10):
 
 
 
-print(res)
+print("{}".format(res))
