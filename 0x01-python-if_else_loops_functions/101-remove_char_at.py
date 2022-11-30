@@ -10,4 +10,4 @@ def remove_char_at(str, n):
     else:
         get_rid = ''
 
-    return get_rid
+    print(get_rid)
