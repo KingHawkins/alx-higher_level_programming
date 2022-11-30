@@ -16,7 +16,7 @@ def fizzbuzz():
                 print(' ', end='')
         else:
             print(i, end='')
-            print(' ', end=''ii
+            print(' ', end='') 
 
 
-fizzbuzz()
+
