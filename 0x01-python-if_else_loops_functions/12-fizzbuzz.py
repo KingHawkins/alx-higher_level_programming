@@ -1,4 +1,4 @@
-`#!/usr/bin/python3
+#!/usr/bin/python3
 def fizzbuzz():
     select = ''
     for i in range(1, 101):
