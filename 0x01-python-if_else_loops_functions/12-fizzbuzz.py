@@ -10,13 +10,10 @@ def fizzbuzz():
             print(' ', end='')
         elif i % 5 == 0:
             if i == 100:
-                print('Buzz ')
+                print('Buzz', end='')
             else:
                 print('Buzz', end='')
                 print(' ', end='')
         else:
             print(i, end='')
             print(' ', end='')
-
-
-

@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-c = 'a'
 def islower(c):
     lower_list = [chr(i) for i in range(97, 123)]
     for i in lower_list:
@@ -10,6 +9,3 @@ def islower(c):
             value = False
 
     return value
-
-
-islower(c)
