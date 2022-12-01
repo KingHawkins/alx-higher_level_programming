@@ -6,4 +6,4 @@ if __name__ == "__main__":
         if '__' in list_hidden[i]:
             continue
         else:
-            print(list_hidden[i])
+            print("{}".format(list_hidden[i]))
