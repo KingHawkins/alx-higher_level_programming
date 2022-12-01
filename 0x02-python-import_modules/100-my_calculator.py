@@ -1,21 +1,23 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
-    import sys
+    from sys import argv
     from calculator_1 import add, sub, div, mul
     operator = ['*', '/', '+', '-']
-    if len(sys.argv[1:]) < 3 or len(sys.argv[1:]) > 3:
+    if len(argv[1:]) < 3 or len(argv[1:]) > 3:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
-        sys.exit(1)
+        exit(1)
     else:
-        if sys.argv[2] in operator:
-            if sys.argv[2] == '+':
-                print("{} + {} = {}".format(sys.argv[1], sys.argv[3], add(int(sys.argv[1]), int(sys.argv[3]))))
-            elif sys.argv[2] == '-':
-                print("{} - {} = {}".format(sys.argv[1], sys.argv[3], sub(int(sys.argv[1]), int(sys.argv[3]))))
-            elif sys.argv[2] == '*':
-                print("{} * {} = {}".format(sys.argv[1], sys.argv[3], mul(int(sys.argv[1]), int(sys.argv[3]))))
+        i = argv[1]
+        j = argv[3]
+        if argv[2] in operator:
+            if argv[2] == '+':
+                print("{} + {} = {}".format(i, j, add(int(i), int(j))))
+            elif argv[2] == '-':
+                print("{} - {} = {}".format(i, j, sub(int(i), int(j))))
+            elif argv[2] == '*':
+                print("{} * {} = {}".format(i, j, mul(int(i), int(j))))
             else:
-                print("{} / {} = {}".format(sys.argv[1], sys.argv[3], div(int(sys.argv[1]), int(sys.argv[3]))))
+                print("{} / {} = {}".format(i, j, div(int(i), int(j))))
         else:
             print("Unknown operator. Available operators: +, -, * and /")
-            sys.exit(1)
+            exit(1)
