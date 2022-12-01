@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-import test
-print("{}".format(test.sum))
+import string
+print("{}".format(string.ascii_uppercase))
