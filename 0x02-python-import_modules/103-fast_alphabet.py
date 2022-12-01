@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-letter = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-print("{}".format(letter))
+import test
+print("{}".format(test.sum))
