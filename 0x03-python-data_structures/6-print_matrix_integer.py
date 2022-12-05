@@ -1,7 +1,9 @@
 #!/usr/bin/python3
 def print_matrix_integer(matrix=[[]]):
     for mat in matrix:
-        if mat:
-            print(*mat)
-        else:
-            print("{}".format(''))
+        for item in mat:
+            if mat:
+               if mat[len(mat) - 1]:
+                  print("{:d}".format(item), end='')
+            else:
+               print("{}".format(''))
