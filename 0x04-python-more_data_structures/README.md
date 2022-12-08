@@ -32,7 +32,4 @@ python
 10. What is a lambda function
 11. What are the map, reduce and filter functions
 
-
-<h2>Tasks</h2>
-Files                                 |       tasks
-------------------------------------- | --------------------------------------t   
+ 
