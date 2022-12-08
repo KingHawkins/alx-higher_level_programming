@@ -6,8 +6,8 @@ python
 ```
 
 
-##Resources##
-###Read or watch###
+<h2>Resources</h2>
+<h3>Read or watch</h3>
 
 <ul>
 <li>Data Structures</li>
@@ -16,8 +16,8 @@ python
 </ul>
 
 
-##Learning Objectives##
-###General###
+<h2>Learning Objectives</h2>
+<h3>General</h3>
 
 
 1. Why Python programming is awesome
@@ -33,11 +33,8 @@ python
 11. What are the map, reduce and filter functions
 
 
-##Tasks##
+<h2>Tasks</h2>
 Files                                 |       tasks
 ------------------------------------- | ---------------------------------------
-0-square_matrix_simple.py	      |computes the square value of all integers of a matrix.
-				      |
-				      |
-				      |
-				      | 
+0-square_matrix_simple.py             |computes the square value of all integers of a matrix.
+				   
