@@ -50,6 +50,13 @@ guillaume@ubuntu:~/0x05$
 <p>Prototype:</p>
 
 
+
+```python
+def safe_print_integer(value):
+```
+
+
+
 ```bash, python
 guillaume@ubuntu:~/0x05$ cat 1-main.py
 #!/usr/bin/python3
