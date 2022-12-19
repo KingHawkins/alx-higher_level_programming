@@ -8,7 +8,7 @@ python
 
 <h2>Tasks</h2>
 
-1. <h3> Safe list printing</h3>
+<h3> 0-Safe list printing</h3>
 <p>Write a function that prints <code>x</code> elements of a list</p>
 
 
@@ -41,6 +41,39 @@ nb_print: 2
 nb_print: 5
 12345
 nb_print: 5
+guillaume@ubuntu:~/0x05$
+```
+
+
+<h3>1-1. Safe printing of an integers list</h3>
+<p>Write a function that prints an integer with <code>"{:d}".format()</code>
+<p>Prototype:</p>
+
+
+```bash, python
+guillaume@ubuntu:~/0x05$ cat 1-main.py
+#!/usr/bin/python3
+safe_print_integer = __import__('1-safe_print_integer').safe_print_integer
+
+value = 89
+has_been_print = safe_print_integer(value)
+if not has_been_print:
+    print("{} is not an integer".format(value))
+
+value = -89
+has_been_print = safe_print_integer(value)
+if not has_been_print:
+    print("{} is not an integer".format(value))
+
+value = "School"
+has_been_print = safe_print_integer(value)
+if not has_been_print:
+    print("{} is not an integer".format(value))
+
+guillaume@ubuntu:~/0x05$ ./1-main.py
+89
+-89
+School is not an integer
 guillaume@ubuntu:~/0x05$
 ```
 
