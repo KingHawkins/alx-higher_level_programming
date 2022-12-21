@@ -7,7 +7,7 @@ class Square:
         """Initialize new square
         Args:
             size(int): size of new square
-            position(int): tuple containing the points the square will be plotted
+            position(int, int): tuple containing the points the square will be plotted
         """
         if size < 0:
             raise Exception("size must be >= 0")
