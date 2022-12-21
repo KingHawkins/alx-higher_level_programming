@@ -19,7 +19,7 @@ class Square:
     def size(self, value):
         """Initialize new square
         Args:
-             size(int): size of new square
+             value(int): size of new square
         """
         if value < 0:
             raise ValueError("size must be >= 0")
