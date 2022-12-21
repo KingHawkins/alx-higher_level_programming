@@ -8,12 +8,7 @@ class Square:
         Args:
              size(int): size of new square
         """
-        if size < 0:
-            raise Exception("size must be >= 0")
-        elif size >= 0:
-            self.size = size
-        else:
-            raise Exception("size must be integer")
+        self.size = size
 
     @property
     def size(self):
