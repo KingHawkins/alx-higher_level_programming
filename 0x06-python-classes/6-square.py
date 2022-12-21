@@ -22,10 +22,6 @@ class Square:
 
     @position.setter
     def position(self, value):
-        """Initialize new square.
-        Args:
-            value(int): size of new square
-        """
         if value[0] < 0 or value[1] < 0  or
             not isinstance(value, tuple) or
             len(value) != 2 or
@@ -44,16 +40,12 @@ class Square:
 
     @size.setter
     def size(self, value):
-        """Initialize new square.
-        Args:
-            value(int): size of new square
-        """
-            if value < 0:
-               raise ValueError("size must be >= 0")
-            elif isinstance(value, int) and value >= 0:
-               self.__size = value
-            else:
-                raise TypeError("size must be an integer")
+        if value < 0:
+             raise ValueError("size must be >= 0")
+        elif isinstance(value, int) and value >= 0:
+             self.__size = value
+        else:
+             raise TypeError("size must be an integer")
 
 
     def area(self):
