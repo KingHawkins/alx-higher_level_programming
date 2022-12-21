@@ -2,7 +2,7 @@
 
 """Define a new class Square."""
 class Square:
-"""Represents class Square."""
+    """Represents class Square."""
     def __init__(self, size=0, position=(0, 0)):
         """Initialize new square
         Args:
