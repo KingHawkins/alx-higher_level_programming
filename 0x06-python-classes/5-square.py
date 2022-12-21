@@ -13,7 +13,7 @@ class Square:
     @property
     def size(self):
         """Gets new size for setting."""
-        return self.size
+        return self.__size
 
     @size.setter
     def size(self, value):
@@ -25,18 +25,18 @@ class Square:
             raise ValueError("size must be >= 0")
         elif not isinstance(value, int):
              raise TypeError("size must be an integer")
-        self.size = value
+        self.__size = value
 
 
     def area(self):
         """Returns new area based on value"""
-        return self.size ** 2
+        return self.__size ** 2
 
 
     def my_print(self):
         """"prints graph based on value."""
-        if self.size == 0:
+        if self.__size == 0:
             print()
         else:
-            for i in range(self.size):
-                print("#"*self.size)
+            for i in range(self.__size):
+                print("#"*self.__size)
