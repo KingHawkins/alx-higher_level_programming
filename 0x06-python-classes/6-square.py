@@ -50,10 +50,10 @@ class Square:
     def my_print(self):
         """Plots the square on a graph."""
         if self.__size == 0:
-           print()
-           return
+            print()
+            return
         else:
             if self.__position[1] > 0:
                 print()
             for i in range(self.__size):
-                    print(' '*self.__position[0] + "#"*self.__size)
+                print(' '*self.__position[0] + "#"*self.__size)
