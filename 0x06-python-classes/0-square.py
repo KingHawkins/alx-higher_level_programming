@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-#0-main.py
+#0-square.py
 
 """creating a class square"""
 
