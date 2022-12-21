@@ -13,8 +13,8 @@ class Square:
         elif not isinstance(size, int):
             raise TypeError("size must be an integer")
         self._size = size
-    
-    
+
+
     def area(self):
         """Return the area of square"""
         return self._size * self._size
