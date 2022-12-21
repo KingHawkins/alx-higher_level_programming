@@ -1,22 +1,18 @@
 #!/usr/bin/python3
 
 """Define a new class Square."""
+
 class Square:
     """Represents class Square."""
+    
     def __init__(self, size=0, position=(0, 0)):
         """Initialize new square
         Args:
             size(int): size of new square
             position(int, int): tuple containing the points the square will be plotted
         """
-        if size < 0:
-            raise Exception("size must be >= 0")
-        elif position[0] < 0 or position[1] < 0:
-            raise ValueError("position must be a tuple of 2 positive integers")
-        elif not isinstance(size, int):
-            raise TypeError("siz must be integer")
         self.size = size
-        self.position = (position[0], position[1])
+        self.position = position
 
     @property
     def size(self):
