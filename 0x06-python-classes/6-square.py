@@ -6,7 +6,7 @@ class Square:
     """Represents class Square."""
     
     def __init__(self, size=0, position=(0, 0)):
-        """Initialize new square
+        """Initialize new square.
         Args:
             size(int): size of new square
             position(int, int): tuple containing the points the square will be plotted
@@ -26,6 +26,10 @@ class Square:
 
     @position.setter
     def position(self, value):
+        """Initialize new square.
+        Args:
+            value(int): size of new square
+        """
         if value[0] < 0 or value[1] < 0  or
             not isinstance(value, tuple) or
             len(value) != 2 or
@@ -33,10 +37,14 @@ class Square:
                 not all(num >= 0 for num in value)):
             raise TypeError("position must be a tuple of 2 positive integers")
         else:
-            self.__position = (value[0], value[1])
+            self.__position = value
 
     @size.setter
     def size(self, value):
+        """Initialize new square.
+        Args:
+            value(int): size of new square
+        """
             if value < 0:
                raise ValueError("size must be >= 0")
             elif isinstance(value, int) and value >= 0:
@@ -54,6 +62,7 @@ class Square:
         """Plots the square on a graph."""
         if self.__size == 0:
            print()
+           return
         else:
             for i in range(self.__size):
                 if self.__position[0] > 0:
