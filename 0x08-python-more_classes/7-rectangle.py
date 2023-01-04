@@ -1,8 +1,11 @@
 #!/usr/bin/python3
+
 """
 Defining class rectangle
 """
+
 class Rectangle:
+    """new class"""
     number_of_instances = 0
     print_symbol = "#"
     def __init__(self, width=0, height=0):
@@ -13,6 +16,7 @@ class Rectangle:
 
     @property
     def width(self):
+        """stes/width"""
         return self.__width
 
     @width.setter
@@ -68,11 +72,13 @@ class Rectangle:
         return (self.__height * self.__width)
 
     def __str__(self):
+        """prints rectangle"""
         for i in range(self.__height):
             print(self.print_symbol*self.__width)
         return ''
 
     def __repr__(self):
+        """represents object"""
         return ("Rectangle({}, {})".format(self.__width, self.__height))
 
     def __del__(self):

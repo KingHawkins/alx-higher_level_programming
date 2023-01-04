@@ -1,14 +1,18 @@
 #!/usr/bin/python3
+
 """
 Defining class rectangle
 """
+
 class Rectangle:
+    """Implementing new object"""
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
 
     @property
     def width(self):
+        """sets/gets width"""
         return self.__width
 
     @width.setter
