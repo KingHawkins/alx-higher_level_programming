@@ -1,7 +1,9 @@
 #!/usr/bin/python3
+
 """
 Defining class rectangle
 """
+
 class Rectangle:
     """Implementing new class"""
     def __init__(self, width=0, height=0):
@@ -59,6 +61,8 @@ class Rectangle:
 
     def perimeter(self):
         """returns perimeter"""
+        if self.__width == 0 or self.__height == 0:
+            return 0
         return (self.__height + self.__width)*2
 
     def area(self):
@@ -67,6 +71,8 @@ class Rectangle:
 
     def __str__(self):
         """prints rectangle"""
+        if self.__width == 0 or self.__height == 0:
+            return ''
         for i in range(self.__height):
             print("#"*self.__width)
         return ''

@@ -70,6 +70,8 @@ class Rectangle:
 
     def perimeter(self):
         """returns perimeter"""
+        if self.__width == 0 or self.__height == 0:
+            return 0
         return (self.__height + self.__width)*2
 
     def area(self):
@@ -78,6 +80,8 @@ class Rectangle:
 
     def __str__(self):
         """prints rectangle"""
+        if self.__height == 0 or self.__width == 0:
+            return ''
         for i in range(self.__height):
             print(self.print_symbol*self.__width)
         return ''
