@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-from add_integer import add_integer
 import unittest
+add_integer = __import__('0-add_integer').add_integer
 
 class Test(unittest.TestCase):
     def testing(self):
