@@ -1,10 +1,13 @@
 #!/usr/bin/python3
-str = "Best school"
-n = 3
 def remove_char_at(str, n):
     copied = str[:]
-    get_rid = copied.replace(copied[n], '')
+    get_rid = ''
+    if copied:
+        if n < 0 or n > len(copied):
+            get_rid = copied[:]
+        elif n >= 0:
+            get_rid = copied.replace(copied[n], '')
+    else:
+        get_rid = ''
+
     print(get_rid)
-
-
-remove_char_at(str,n)

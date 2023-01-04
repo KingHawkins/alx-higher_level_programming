@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 res = ''
-for i in range(10):
-    for j in range(10):
-        if i != 9 or j != 9:
-            res = res + str(i) + str(j)  + ',' + ' '
-          
-        else:
-            res = res + str(i) + str(j)
+for i in range(0, 100):
+    if i < 10:
+        res = res + str(0) + str(i) + ',' + ' '
+    elif i != 99:
+        res = res + str(i) + ',' + ' '
+    else:
+        res = res + str(i)
 
 
 print("{}".format(res))

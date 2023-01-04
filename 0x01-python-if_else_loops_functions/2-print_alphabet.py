@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 res = ''
-for i in range (97, 123):
+for i in range(97, 123):
     res = res + chr(i)
-
-print("{}".format(res), end = "")
+print("{}".format(res), end="")
