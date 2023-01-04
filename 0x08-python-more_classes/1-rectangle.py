@@ -12,12 +12,12 @@ class Rectangle:
         self.height = height
 
     @property
-    def height(self):
+    def width(self):
         """sets/gets width"""
-        return self.__height
+        return self.__width
 
-    @height.setter
-    def height(self, value):
+    @width.setter
+    def width(self, value):
         """Initializes/sets the width
 
         Args:
@@ -33,17 +33,17 @@ class Rectangle:
         elif value < 0:
             raise ValueError("width must be >= 0")
         else:
-            self.__height = value
+            self.__width = value
 
 
     @property
-    def width(self):
+    def height(self):
         """Sets/gets height"""
-        return self.__width
+        return self.__height
 
 
-    @width.setter
-    def width(self, value):
+    @height.setter
+    def height(self, value):
         """Initializes the height
 
         Args:
@@ -59,4 +59,4 @@ class Rectangle:
         elif value < 0:
             raise ValueError("height must be >= 0")
         else:
-            self.__width = value
+            self.__height = value
