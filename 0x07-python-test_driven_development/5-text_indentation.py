@@ -12,7 +12,8 @@ def text_indentation(text):
     if isinstance(text, (int, list)) or isinstance(text, (float, tuple)):
         raise TypeError("text must be a string")
     if isinstance(text, str):
-        if text[len(text)-1] == '.' or text[len(text)-1] == '?' or text[len(text)-1] == ',':
+        if (text[len(text)-1] == '.' or text[len(text)-1] == '?'
+                or text[len(text)-1] == ',') or text[len(text)-1]==':':
             raise IndexError("out of range")
     arr = ['?', '.', ':']
     array = list(text)
