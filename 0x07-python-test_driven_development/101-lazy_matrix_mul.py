@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 import  numpy as np
-def matrix_mul(m_a, m_b):
+def lazy_matrix_mul(m_a, m_b):
     if (not all(isinstance(item, list) for item in m_b)
             and not all(isinstance(item, list) for item in m_a)):
         raise TypeError("m_a and m_b must be a list of lists")
