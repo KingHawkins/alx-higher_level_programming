@@ -9,11 +9,11 @@ def text_indentation(text):
         TypeError: text must be a string
 
     """
-    if isinstance(text, (int, list)) or isinstance(text, (float, tuple)):
+    if not isinstance(text, str):
         raise TypeError("text must be a string")
     if isinstance(text, str):
         if (text[len(text)-1] == '.' or text[len(text)-1] == '?'
-                or text[len(text)-1] == ',') or text[len(text)-1]==':':
+                or text[len(text)-1]==':':
             print("\n\n")
     arr = ['?', '.', ':']
     array = list(text)
@@ -21,4 +21,3 @@ def text_indentation(text):
         if array[item] in arr:
             array[item + 1] = '\n\n'
     print(''.join(array))
-

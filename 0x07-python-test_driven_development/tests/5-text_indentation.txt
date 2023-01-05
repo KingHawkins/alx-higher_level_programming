@@ -51,9 +51,8 @@ Indenting a float:
 
 Indenting a word:
 	>>> text_indentation('Hello World.')
-	Traceback (most recent call last):
-		...
-	IndexError: out of range
+	Hello World.
+	<BLANKLINE>
 	
 Indenting a list:
 	 >>> text_indentation(['Hello World.'])
