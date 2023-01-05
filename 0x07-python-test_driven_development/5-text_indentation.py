@@ -11,12 +11,11 @@ def text_indentation(text):
     """
     if not isinstance(text, str):
         raise TypeError("text must be a string")
-    if (text[len(text)-1] == '.' or text[len(text)-1] == '?'
-            or text[len(text)-1]==':'):
-        print("\n\n")
     arr = ['?', '.', ':']
     array = list(text)
     for item in range(len(array)):
         if array[item] in arr:
             array[item + 1] = '\n\n'
+        if array[len(array)-1] in arr:
+            print('\n\n')
     print(''.join(array))
