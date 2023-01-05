@@ -18,4 +18,4 @@ def text_indentation(text):
     for item in range(len(array)):
         if array[item] in arr:
             array[item + 1] = '\n\n'
-    print(''.join(array))
+    print(''.join(array), end='')
