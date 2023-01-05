@@ -13,9 +13,9 @@ def text_indentation(text):
         raise TypeError("text must be a string")
     arr = ['?', '.', ':']
     array = list(text)
+    if array[len(array)-1] in arr:
+        array.append(' ')
     for item in range(len(array)):
         if array[item] in arr:
             array[item + 1] = '\n\n'
-        if array[len(array)-1] in arr:
-            print('\n\n')
     print(''.join(array))
