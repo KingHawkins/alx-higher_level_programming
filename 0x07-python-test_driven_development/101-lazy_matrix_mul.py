@@ -23,8 +23,8 @@ def lazy_matrix_mul(m_a, m_b):
         raise TypeError("m_a must be a list")
     elif (not all(isinstance(val, (int, float))
         for item in m_a for val in item)
-            and not all(isinstance(val, (int, float))
-                for item in m_b for val in item)):
+        and not all(isinstance(val, (int, float))
+            for item in m_b for val in item)):
         raise ValueError("m_a and m_b should contain only integers or floats")
     elif (not all(isinstance(val, (int, float))
         for item in m_a for val in item)):
