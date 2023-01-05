@@ -4,8 +4,8 @@ def say_my_name(first_name, last_name=''):
 
     Args:
         first_name(str): first parameter
-        last_name(str): parameter to be appended to first_name to make full name
-
+        last_name(str): parameter to be appended to first_name to make full
+                        name.
     Raises:
         TypeError: first_name/last_name must be a string
 
