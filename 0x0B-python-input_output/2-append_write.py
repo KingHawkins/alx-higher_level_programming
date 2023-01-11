@@ -2,6 +2,7 @@
 
 """appends a string to end of text file and retruns no. of char added"""
 
+
 def append_write(filename='', text=''):
     """Implementation.
 

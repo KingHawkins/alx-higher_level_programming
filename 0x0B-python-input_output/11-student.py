@@ -2,6 +2,7 @@
 
 """defines a student"""
 
+
 class Student:
     """Representation of class student"""
     my = ['first_name', 'last_name', 'age']

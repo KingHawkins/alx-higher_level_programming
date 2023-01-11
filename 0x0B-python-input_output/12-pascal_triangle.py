@@ -2,6 +2,7 @@
 
 """pascal triangle"""
 
+
 def pascal_triangle(n):
     """Implementation of the function"""
     if n <= 0:

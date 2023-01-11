@@ -2,8 +2,12 @@
 
 """reading a file"""
 
+
 def read_file(filename=''):
-    """reading"""
+    """Implementation
+    Args:
+        filename(file): file
+    """
     with open(filename, 'r') as read:
         for line in read.readlines():
             print(line)
