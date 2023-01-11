@@ -21,7 +21,7 @@ class Student:
                 'first_name': self.first_name,
                 'last_name': self.last_name,
                 'age': self.age
-                }
+        }
 
     def reload_from_json(self, json):
         """replaces all attributs of student instance"""

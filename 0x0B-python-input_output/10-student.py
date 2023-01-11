@@ -11,6 +11,7 @@ class Student:
         self.last_name = last_name
         self.age = age
 
+
     def to_json(self, attrs=None):
         """retrieves a dictionary rep of student"""
         my = ['first_name', 'last_name', 'age']
@@ -21,4 +22,4 @@ class Student:
                 'first_name': self.first_name,
                 'last_name': self.last_name,
                 'age': self.age
-                }
+        }

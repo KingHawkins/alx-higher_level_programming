@@ -13,4 +13,4 @@ def to_json_string(my_obj):
     Raises:
         Exception(FileNotFoundError)
     """
-    return json.dumps(my_obj, indent=None)
+    return json.dumps(my_obj)
