@@ -11,7 +11,6 @@ def save_to_json_file(my_obj, filename):
     Args:
         my_obj(object): object to e parsed to file
         filename(file): file in which obj is written
-
     """
     with open(filename, 'w', encoding='utf-8') as out:
         json.dump(my_obj, out)
