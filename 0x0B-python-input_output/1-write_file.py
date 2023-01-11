@@ -4,11 +4,9 @@
 
 def write_file(filename='', text=''):
     """Implementation
-
     Args:
         filename(file): name of file to opened
         text(input): text to be written into file
-
     Raises:
         Exception: if filename does not exist
     """
