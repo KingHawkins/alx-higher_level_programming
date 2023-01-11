@@ -1,6 +1,4 @@
 #!/usr/in/python3
-
-"""Importing json"""
 import json
 
 """json stringifys"""
