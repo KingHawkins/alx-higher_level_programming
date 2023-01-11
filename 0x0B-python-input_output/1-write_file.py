@@ -1,5 +1,4 @@
 #!/usr/bin/python
-# -*- coding: utf-8 -*-
 
 """writes a string to a text file and returns no. of characters written"""
 
