@@ -2,6 +2,7 @@
 
 """writes a string to a text file and returns no. of characters written"""
 
+
 def write_file(filename='', text=''):
     """Implementation
     Args:
