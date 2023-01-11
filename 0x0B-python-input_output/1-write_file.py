@@ -1,6 +1,8 @@
-#!/usr/bin/python3
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 
 """writes a string to a text file and returns no. of characters written"""
+
 
 def write_file(filename='', text=''):
     """Implementation
@@ -10,6 +12,7 @@ def write_file(filename='', text=''):
     Raises:
         Exception: if filename does not exist
     """
+
     number = 0
     with open(filename, 'w', encoding='utf-8') as write_out:
         write_out.write(text)
