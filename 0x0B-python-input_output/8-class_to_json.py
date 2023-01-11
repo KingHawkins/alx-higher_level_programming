@@ -3,7 +3,8 @@
 """Importing json"""
 import json
 
-"""Returns dictionary description with simple data str(list, dict\
+"""
+Returns dictionary description with simple data str(list, dict\
         string, int, bool) for json serialization of an object
 """
 
