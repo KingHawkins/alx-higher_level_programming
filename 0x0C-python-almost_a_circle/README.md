@@ -1,9 +1,9 @@
-#0x0C. Python - Almost a circle
+<h1>0x0C. Python - Almost a circle</h1>
 
 `Python` `OOP`
 
 
-##Background context
+<h2>Background context</h2>
 The AirBnB project is a big part of the Higher Level curriculum. This project will help you be ready for it.
 
 In this project, you will review everything about python:
