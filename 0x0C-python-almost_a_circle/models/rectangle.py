@@ -128,11 +128,11 @@ class Rectangle(Base):
     def to_dictionary(self):
         """writes a new dictionary"""
         return {
+                "x": self.__x,
+                "width": self.__width,
                 "id": self.id,
-                "width": self.width,
-                "height": self.height,
-                "x": self.x,
-                "y": self.y
+                "height": self.__height,
+                "y": self.__y
                 }
 
     def display(self):
