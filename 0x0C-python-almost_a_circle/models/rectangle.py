@@ -15,7 +15,6 @@ class Rectangle(Base):
         self.x = x
         self.y = y
 
-
     @property
     def width(self):
         """returns width"""
@@ -54,7 +53,6 @@ class Rectangle(Base):
             raise ValueError("height must be > 0")
         self.__height = height
 
-
     @property
     def x(self):
         """returns x"""
@@ -74,7 +72,6 @@ class Rectangle(Base):
             raise ValueError("x must be >= 0")
         self.__x = x
 
-
     @property
     def y(self):
         """returns y"""
@@ -93,8 +90,6 @@ class Rectangle(Base):
         elif y < 0:
             raise ValueError("y must be >= 0")
         self.__y = y
-
-
 
     def update(self, *args, **kwargs):
         """updates the rectangle class"""
@@ -121,28 +116,24 @@ class Rectangle(Base):
         for item in kwargs:
             setattr(self, item, kwargs[item])
 
-
     def __str__(self):
         """returns the string rep of object"""
         return ("[{}] ({}) {}/{} - {}/{}".format(__class__.__name__,
-            self.id, self.__x, self.__y, self.__width, self.__height))
-
+                self.id, self.__x, self.__y, self.__width, self.__height))
 
     def area(self):
         """Returns the area of rectangle"""
         return self.__width * self.__height
 
-
     def to_dictionary(self):
         """writes a new dictionary"""
-        return{
+        return {
                 "id": self.id,
                 "width": self.width,
                 "height": self.height,
                 "x": self.x,
                 "y": self.y
                 }
-
 
     def display(self):
         """prints the rectangle"""

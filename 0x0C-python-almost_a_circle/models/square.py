@@ -16,20 +16,18 @@ class Square(Rectangle):
     def __str__(self):
         """returns string rep of class"""
         return ("[{}] ({}) {}/{} - {}".format(__class__.__name__, self.id,
-            self.x, self.y, self.height))
+                self.x, self.y, self.height))
 
     @property
     def size(self):
         """gets size"""
         return self.width and self.height
 
-
     @size.setter
     def size(self, size):
         """sets the width"""
         self.width = size
         self.height = size
-
 
     def update(self, *args, **kwargs):
         """overiding update of rectangle class"""
@@ -52,10 +50,9 @@ class Square(Rectangle):
         for item in kwargs:
             setattr(self, item, kwargs[item])
 
-
     def to_dictionary(self):
         """writes a new dictionary"""
-        return{
+        return {
                 "id": self.id,
                 "size": self.height,
                 "x": self.x,

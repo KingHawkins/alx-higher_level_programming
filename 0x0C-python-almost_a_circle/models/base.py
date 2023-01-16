@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 
 """importing json"""
+
+
 import json
 import csv
 import os
@@ -12,6 +14,7 @@ import turtle
 class Base:
     """Implementing the base class"""
     __nb_objects = 0
+
     def __init__(self, id=None):
         """Initializing the base class
         Args:
@@ -19,28 +22,25 @@ class Base:
         Raises:
             Exception
         """
-        if id != None:
+        if id is not None:
             self.id = id
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
 
-
     @staticmethod
     def to_json_string(list_dictionaries):
         """converts dictionary to json string"""
-        if list_dictionaries == None or list_dictionaries == []:
+        if list_dictionaries == [] or list_dictionaries is None:
             return []
         return json.dumps(list_dictionaries)
-
 
     @staticmethod
     def from_json_string(json_string):
         """retruns the list of the JSON string repr json_string"""
-        if json_string == None or json_string == []:
+        if json_string == [] or json_string is None:
             return []
         return json.loads(json_string)
-
 
     @classmethod
     def save_to_file(cls, list_objs):
@@ -59,7 +59,6 @@ class Base:
         with open(filename, 'w') as f:
             f.write(lists)
 
-
     @classmethod
     def create(cls, **dictionary):
         """returns the instance with all attributes set"""
@@ -69,7 +68,6 @@ class Base:
             new = cls(10)
         new.update(**dictionary)
         return new
-
 
     @classmethod
     def load_from_file(cls):
@@ -87,12 +85,11 @@ class Base:
                 empty.append(cls.create(**item))
             return empty
 
-
     @classmethod
     def save_to_file_csv(cls, list_objs):
         """saves to csv file"""
         file = '{}.csv'.format(cls.__name__)
-        if os.path.exists(file) == False:
+        if os.path.exists(file) is False:
             return []
         if cls.__name__ == 'Rectangle':
             with open(file, 'w', newline='') as out:
@@ -103,12 +100,11 @@ class Base:
                 new = csv.writer(out)
                 new.writerow(list_objs)
 
-
     @classmethod
     def load_from_file_csv(cls):
         """loads from csv file"""
         file = '{}.csv'.format(cls.__name__)
-        if os.path.exists(file) == False:
+        if os.path.exists(file) is False:
             return []
         with open(file, newline='') as r:
             read = csv.reader(r, delimiter=' ', quotechar=',')
