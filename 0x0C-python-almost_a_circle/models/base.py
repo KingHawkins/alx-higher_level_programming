@@ -2,6 +2,9 @@
 
 """importing json"""
 import json
+import csv
+import os
+import turtle
 
 """base class"""
 
@@ -26,9 +29,17 @@ class Base:
     @staticmethod
     def to_json_string(list_dictionaries):
         """converts dictionary to json string"""
-        if len(list_dictionaries) == 0 or list_dictionaries == None:
-            return '[]'
+        if list_dictionaries == None or list_dictionaries == []:
+            return []
         return json.dumps(list_dictionaries)
+
+
+    @staticmethod
+    def from_json_string(json_string):
+        """retruns the list of the JSON string repr json_string"""
+        if json_string == None or json_string == []:
+            return []
+        return json.loads(json_string)
 
 
     @classmethod
@@ -47,3 +58,123 @@ class Base:
 
         with open(filename, 'w') as f:
             f.write(lists)
+
+
+    @classmethod
+    def create(cls, **dictionary):
+        """returns the instance with all attributes set"""
+        if cls.__name__ == 'Rectangle':
+            new = cls(10, 10)
+        else:
+            new = cls(10)
+        new.update(**dictionary)
+        return new
+
+
+    @classmethod
+    def load_from_file(cls):
+        """loads from json file"""
+        data = ''
+        file = '{}.json'.format(cls.__name__)
+        try:
+            with open(file, 'r', encoding='utf-8') as load:
+                data = cls.from_json_string(load.read())
+        except FileNotFoundError:
+            return []
+        finally:
+            empty = []
+            for item in data:
+                empty.append(cls.create(**item))
+            return empty
+
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """saves to csv file"""
+        file = '{}.csv'.format(cls.__name__)
+        if os.path.exists(file) == False:
+            return []
+        if cls.__name__ == 'Rectangle':
+            with open(file, 'w', newline='') as out:
+                new = csv.writer(out)
+                new.writerow(list_objs)
+        else:
+            with open(file, 'w', newline='') as out:
+                new = csv.writer(out)
+                new.writerow(list_objs)
+
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """loads from csv file"""
+        file = '{}.csv'.format(cls.__name__)
+        if os.path.exists(file) == False:
+            return []
+        with open(file, newline='') as r:
+            read = csv.reader(r, delimiter=' ', quotechar=',')
+            arr = []
+            for row in read:
+                arr.append(row)
+            return arr
+
+    def draw(list_rectangles, list_squares):
+        """draws all rectangles and squares"""
+        window = turtle.Screen()
+        draw = turtle.Turtle()
+        draw.color('blue')
+        draw.pensize(3)
+        mat, other, x, cum = [], [], [], []
+        for item in list_squares:
+            new = item.to_dictionary()
+            mat.append(new)
+        for item in mat:
+            x.append(item['size'])
+        draw.forward(x[1:][0])
+        draw.left(90)
+        draw.forward(x[1:][0])
+        draw.left(90)
+        draw.forward(x[1:][0])
+        draw.left(90)
+        draw.forward(x[1:][0])
+        draw.left(90)
+        draw.color('green')
+        draw.forward(x[1:][1])
+        draw.left(90)
+        draw.forward(x[1:][1])
+        draw.left(90)
+        draw.forward(x[1:][1])
+        draw.left(90)
+        draw.forward(x[1:][1])
+        draw.left(90)
+        for item in list_rectangles:
+            other.append(item.to_dictionary())
+        for item in other:
+            cum.append(item['width'])
+            cum.append(item['height'])
+        draw.color('yellow')
+        draw.forward(cum[0])
+        draw.left(90)
+        draw.forward(cum[1])
+        draw.left(90)
+        draw.forward(cum[0])
+        draw.left(90)
+        draw.forward(cum[1])
+        draw.left(90)
+        draw.color('black')
+        draw.forward(cum[2])
+        draw.left(90)
+        draw.forward(cum[3])
+        draw.left(90)
+        draw.forward(cum[2])
+        draw.left(90)
+        draw.forward(cum[3])
+        draw.left(90)
+        draw.color('red')
+        draw.forward(cum[4])
+        draw.left(90)
+        draw.forward(cum[5])
+        draw.left(90)
+        draw.forward(cum[4])
+        draw.left(90)
+        draw.forward(cum[5])
+        draw.left(90)
