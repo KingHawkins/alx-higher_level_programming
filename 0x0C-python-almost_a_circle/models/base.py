@@ -118,7 +118,12 @@ class Base:
             return arr
 
     def draw(list_rectangles, list_squares):
-        """draws all rectangles and squares"""
+        """draws all rectangles and squares\
+                Based on the arguments given
+        Args:
+            list_squares(obj): list of squares
+            list_rectangles(obj): list of rectangles
+        """
         window = turtle.Screen()
         draw = turtle.Turtle()
         draw.color('blue')
