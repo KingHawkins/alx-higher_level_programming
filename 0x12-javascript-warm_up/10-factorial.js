@@ -1,7 +1,7 @@
 #!/usr/bin/node
 // prints factorial
 function factorial (a) {
-  if (a === 0 || a === 0 || !Number(a)) {
+  if (a === 1 || a === 0 || !Number(a)) {
     return (1);
   } else {
     return a * factorial(a - 1);
