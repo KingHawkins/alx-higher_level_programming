@@ -1,11 +1,7 @@
 #!/usr/bin/node
-// prints argument is is integer convertible
-if (process.argv.length < 3) {
+const number = parseInt(process.argv[2]);
+if (Number.isNaN(number)) {
   console.log('Not a number');
 } else {
-  if (Number(process.argv[2])) {
-    console.log('My number: ' + Math.trunc(Number(process.argv[2])));
-  } else {
-    console.log('Not a number');
-  }
+  console.log('My number: ' + number);
 }
