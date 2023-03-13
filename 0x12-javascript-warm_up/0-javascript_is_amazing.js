@@ -1,4 +1,4 @@
 #!/usr/bin/node
 // prints "Javascript is amazing"
-myVar = 'JavaScript is amazing';
+myVar = 'Javascript is amazing';
 console.log(myVar);
