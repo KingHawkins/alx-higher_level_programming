@@ -1,5 +1,7 @@
 #!/usr/bin/node
-class Rectangle {
+// Script class Rectangle that defines a rectangle
+
+const Rectangle = class Rectangle {
   constructor (w, h) {
     if (w > 0 && h > 0) {
       this.width = w;
@@ -8,15 +10,15 @@ class Rectangle {
   }
 
   print () {
-    const array = [];
-    while (this.width > 0) {
-      array.push('X');
-      this.width--;
-    }
-    while (this.height > 0) {
-      console.log(array.join(',').replaceAll(',', ''));
-      this.height--;
+    let prints = '';
+    for (let cont1 = 0; cont1 < this.height; cont1++) {
+      for (let cont = 0; cont < this.width; cont++) {
+        prints = prints + 'X';
+      }
+      console.log(prints);
+      prints = '';
     }
   }
-}
+};
+
 module.exports = Rectangle;
