@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+"""selects all from a table"""
 import sys
 import MySQLdb
 
