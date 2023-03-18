@@ -4,13 +4,13 @@
         and an instance Base = declarative_base():
 """
 
-
-from sqlalchemy import String, Integer, Column, create_engine
-from sqlalchemy.ext.declarative import declarative_base
 import sys
+from sqlalchemy import String, Integer, Column, create_engine, MetaData
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import relationship
 
-
-Base = declarative_base()
+metadata = MetaData()
+Base = declarative_base(metadata=metadata)
 
 
 class State(Base):
@@ -18,3 +18,4 @@ class State(Base):
     __tablename__ = 'states'
     id = Column(Integer, nullable=False, primary_key=True, autoincrement=True)
     name = Column(String(128), nullable=False)
+    cities = relationship("City", backref="states")
