@@ -10,7 +10,7 @@ if __name__ == '__main__':
     db = MySQLdb.connect(user=sys.argv[1],
                          passwd=sys.argv[2], db=sys.argv[3], port=3306)
     conn = db.cursor()
-    conn.execute("""SELECT DISTINCT cities.name\
+    conn.execute("""SELECT cities.name\
                   FROM states, cities\
                   WHERE states.name = %s;""", (sys.argv[4],))
     states = conn.fetchall()
