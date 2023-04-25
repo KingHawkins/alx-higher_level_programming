@@ -13,5 +13,5 @@ request(process.argv[2], (error, response, body) => {
       dict[item.userId] = count;
     });
     console.log(dict);
-  } else console.error(error);
+  } else throw error;
 });
